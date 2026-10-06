@@ -1,0 +1,23 @@
+SME-Credit-4.0 — WINDOWS QUICK START
+
+1. Install Python 3.10+ and Node.js 20.9+ (supported LTS preferred).
+2. Extract the ZIP. Open PowerShell in SME-Credit-4.0.
+3. Terminal 1:
+   cd backend
+   python -m venv .venv
+   .\.venv\Scripts\python -m pip install -r requirements.txt
+   .\.venv\Scripts\python -m uvicorn main:app --host 127.0.0.1 --port 8000
+4. Terminal 2, starting in SME-Credit-4.0:
+   cd frontend
+   npm ci
+   npm run dev
+5. Open http://localhost:3000.
+6. Open backend/data/setup-token.txt, copy the token into first-run setup,
+   and create your own administrator account. Then sign in.
+7. Read README.md for imports, roles, document review, affordability and AI setup.
+
+Data survives restarts in backend/data. Back up that folder while the backend
+is stopped. Do not upload it or your API keys to GitHub.
+
+The included model is synthetic. No real identity provider, bank connection,
+regulatory certification or money transfer is included.
